@@ -12,19 +12,23 @@ import ReactDOM from "react-dom";
 //generate hour of day as a number 0-23
 const today = new Date();
 const hourOfDay = today.getHours();
+
+//create greeting variable
+let greeting;
+
 //define a style variable as JS object
 const customStyle = {
-  color: "black"
+  color: ""
 };
 
 //change words and color of greeting depending on hour of day
 if (hourOfDay < 12) {
   greeting = "morning";
   customStyle.color = "red";
-} else if (hourOfDay >= 12 && hourOfDay < 18) {
+} else if (hourOfDay < 18) {
   greeting = "afternoon";
   customStyle.color = "green";
-} else if (hourOfDay >= 18 && hourOfDay < 24) {
+} else {
   greeting = "night";
   customStyle.color = "blue";
 }
